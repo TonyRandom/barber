@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп Бородинский</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 <header class="main-header">
 <nav class="main-navigation">
   <a class="main-header-logo">
-  <img src="img/index-logo.svg" alt="Логотип барбершопа "Бородинский" height="153" width="368">
+  <img src="svg/index-logo.svg" alt="Логотип барбершопа "Бородинский" height="153" width="368">
 </a>
   <ul class="site-navigation">
     <li> <a href="info.html"> Информация </a></li>
@@ -31,6 +33,8 @@
 </header>
     <main class="container">
       <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>
+
+  
 <section class="features">
   <h2 class="visually-hidden">Преимущества</h2>
   <ul class="features-list">
@@ -53,6 +57,7 @@
 
 </section>
 
+<div class="index-columns">  
 <section class="news">
   <h2> Новости </h2>
   <ul class="news-list">
@@ -64,6 +69,7 @@
   <a class="button" href="news.html">Все новости</a>
 </section>
 
+
 <section class="gallery">
   <h2>Фотогалерея</h2>
 <figure class="gallery-content">
@@ -73,7 +79,11 @@
   <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
 
 </section>
-<section class="contacts">
+
+</div>  
+
+<div class="index-columns">
+  <section class="contacts">
   <h2>Контактная информация</h2>
 
   <p>Барбершоп «Бородинский» <br>
@@ -109,8 +119,10 @@
 
 
 </section>
+</div>
 
-    </main>
+
+</main>
 
 <footer class="main-footer">
   <p class="footer-contacts">
@@ -173,22 +185,6 @@
 
   </body>
 
-  <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
 
-    <p><label class="visually-hidden" for="user-login">Логин</label><input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Логин"></p>
   
-    <p><label class="visually-hidden" for="user-password">Пароль</label><input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Пароль"></p>
-  
-    <p class="login-password-info">
-      <label >
-      <input type="checkbox"  class="visually-hidden" name="remember">
-      <span class="checkbox-indicator"></span>
-      Запомните меня
-    </label>
-    <a class="restore" href="#">Я забыл пароль!</a> </p>
-    <button class="button" type="submit">Войти</button>
-  </form>
-    <button class="modal-close" type="button">Закрыть</button>
-  </section>
-
 </html>

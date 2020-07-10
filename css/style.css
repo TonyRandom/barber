@@ -458,3 +458,98 @@ line-height: 30px;
 .product-info ul {
     list-style: none;
 }
+
+
+
+            
+                /* СЕТОЧНЫЕ СТИЛИ  */
+
+
+    .inner-page {
+
+        
+    
+     /* background-image: url("../img/background.jpg");
+        background-size: 1200px auto;
+        background-position: top center;
+        background-repeat: no-repeat; */
+    }
+
+.inner-page .main-header {
+    background-color: #000000;
+    margin-bottom: 50px;
+}
+
+.inner-page .main-header-logo {
+order: 0;
+
+width: 111px;
+height: 24px;
+padding: 23px 20px;
+
+}
+.inner-page .main-navigation {
+    align-items: flex-start;
+    flex-direction: row;
+
+}
+
+.inner-page .user-navigation {
+    margin-left: auto;
+}
+
+.page-title {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.breadcrumbs {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.filters {
+    width: 180px;
+}
+
+.catalog {
+    width: 700px;
+}
+
+.catalog-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-item {
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.catalog-item:nth-child(3n) {
+
+    margin-right: 0;
+}
+
+.catalog-list {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    list-style: none;
+}
+
+
+.pagination-list {
+    margin: 0;
+    padding: 0;
+}
+
+.inner-page .main-footer {
+    margin-top: 45px;
+}

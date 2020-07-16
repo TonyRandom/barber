@@ -19,8 +19,19 @@ a {text-decoration: none;
     color: white;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+
+}
+
 
 .button {
+
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 16px;
+
     font: inherit;
 
     text-align: center;
@@ -32,6 +43,14 @@ a {text-decoration: none;
     background-color: #000000;
     border: none;
 }
+
+.button.disabled,
+.button:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: #000000;
+}
+
 .button:hover,
 .button:active,
 .button:focus {
@@ -45,8 +64,8 @@ a {text-decoration: none;
 
 .main-header-logo {
 
-    width: 168px;
-    height: 153px;
+    /* width: 168px;
+    height: 153px; */
     order: 2;
 }
 
@@ -64,13 +83,58 @@ a {text-decoration: none;
 
 .site-navigation {
     width: 620px;
-    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-navigation a,
+.user-navigation a {
+    display: block;
+    color: #ffffff;
+
+    padding: 25px 20px;
+    vertical-align: middle;
+
 }
 
 .user-navigation {
     width: 140px;
     
+
+    display: flex;
+    
 }
+
+
+.user-navigation .login-link {
+  
+    padding-left: 50px;
+    position: relative;
+
+}
+
+.login-link::before {
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    content: "";
+    width: 16px;
+    height: 18px;
+    background-image: url("../img/login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+   
+    
+    
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+    opacity: 1;
+}
+
 
 .main-navigation-wrapper {
     width: 100%;
@@ -126,18 +190,48 @@ a {text-decoration: none;
 }
 
 .feature-item h3 {
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 60px;
     font-size: 30px;
     line-height: 42px;
 }
+
+.feature-item h3::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -10px;
+
+    background-color: #ffffff;
+
+    transform: rotate(45deg);
+}
+
+.feature-item p {
+    margin: 10px 0;
+}
+
 
 .index-columns {
 color: #000000;
 padding: 50px 80px;
 
+
 background-color: #f8f5f2;
-background-image: url(../img/pattern-light.jpg);
-background-position: 0 0;
-background-repeat: repeat;
+background-image: 
+url("../img/line.png"),
+url("../img/pattern-light.jpg");
+background-position:
+center,
+0 0;
+background-repeat: 
+no-repeat,
+repeat;
 
 display: flex;
 justify-content: space-between;
@@ -145,9 +239,34 @@ justify-content: space-between;
 margin-bottom: 35px;
 }
 
+.index-columns h2 {
+    margin: 0;
+    margin-bottom: 25px;
+    
+}
+
 .news {
 width: 380px;
 }
+
+
+.news-list {
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.news-item {
+    margin-bottom: 25px;
+}
+
+.news-item p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 
 .gallery {
 width: 300px;
@@ -158,8 +277,26 @@ width: 300px;
     width: 380;
 }
 
+.contacts p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+
 .appointment {
     width: 300px;
+}
+
+.appointment .button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 0;
+}
+
+.appointment-info {
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 .index-columns h2 {
@@ -177,10 +314,61 @@ list-style: none;
 }
 
 .gallery-content {
+    height: 164px;
+    margin: 0;
+
     background-color: #cccccc;
     border: 7px solid #ffffff;
 }
+
+.gallery-container {
+    position: relative;
+    height: 260px;
+}
+
+.gallery-content {
+    height: 164px;
+    width: 286px;
+}
+
+.gallery-button {
+    position: absolute;
+    bottom: 0;
+
+    box-sizing: border-box;
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-button-back {
+    left: 0;
+}
+.gallery-button-next {
+    right: 0;
+}
+
+.appointment-item {
+    width: 140px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.appointment-item label {
+    display: block;
+    margin-bottom: 9px;
+    margin-left: 15px;
+}
+
 .appointment-item input {
+    display: block;
+    width: 140px;
+    box-sizing: border-box;
+    
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-bottom: 7px;
+
     font: inherit;
 
     background-color: transparent;
@@ -188,6 +376,13 @@ list-style: none;
 }
 .appointment-item input:focus {
     border-color: #663d15;
+}
+
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
@@ -219,11 +414,26 @@ list-style: none;
 width: 145px;
 }
 
+.footer-social b {
+    display: block;
+    margin-bottom: 15px;
+}
+
 .footer-copyright {
     text-align: center;
     margin: 0;
     width: 150px;
     margin-left: auto;
+}
+
+.footer-copyright b {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-copyright .button {
+    display: block;
+    margin-right: 0;
 }
 
 .footer-contacts a {
@@ -240,10 +450,35 @@ width: 145px;
 }
 .footer-social ul {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 141px;
+    margin: 0 auto;
+    padding: 0;
 }
 .social-button {
-    color: #ffffff;
+    /* color: #ffffff; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    
+    background-color: #000000;
 }
+
+.social-button:hover,
+.social-button:focus {
+    background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+    fill: #000000;
+}
+
 .footer-copyright {
     text-align: center;
 }
@@ -553,3 +788,37 @@ padding: 23px 20px;
 .inner-page .main-footer {
     margin-top: 45px;
 }
+
+
+
+/* ТОВАР */
+
+.product-photos {
+    width: 460px;
+}
+
+.product-info {
+    width: 390px;
+}
+
+
+
+
+/* .visually-hidden:not(:focus):not(:active),
+input[type:"checkbox"].visually-hidden,
+input[type:"radio"].visually-hidden, */
+
+.visually-hidden
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
